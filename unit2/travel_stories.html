@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Stories</title>
+  <style>
+    /* Base page styling: improves readability and overall presentation */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Wrapper: centers content and provides a neat card-like layout */
+    .container {
+      width: 88%;
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2.3rem;
+    }
+
+    p.note {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* Table styling: makes travel destination data clear and easy to scan */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 2px solid #8aaae5;
+      padding: 16px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    th {
+      background-color: #dbe8ff;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Alternating row colors improve table readability */
+    tr:nth-child(even) {
+      background-color: #f9fbff;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #eef4ff;
+    }
+
+    /* Image styling: keeps attraction images consistent in size */
+    .attraction-image {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Hover effect: changes image opacity and adds small zoom effect */
+    .attraction-image:hover {
+      opacity: 0.7;
+      transform: scale(1.03);
+    }
+
+    /* Section styling: creates a clear destination information area */
+    .story-section {
+      margin-bottom: 35px;
+      padding: 18px;
+      border-left: 6px solid #4a86b8;
+      background-color: #f8fbff;
+      border-radius: 6px;
+    }
+
+    .story-section h2 {
+      margin-top: 0;
+      color: #1f3c88;
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #1f3c88;
+      font-weight: bold;
+    }
+
+    .back-top:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="top">Travel Destinations</h1>
+    <p class="note">
+      Click an attraction image to jump to the related travel story at the bottom of the page.
+    </p>
+
+    <!-- Travel table: shows destinations and linked attraction images -->
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Attraction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paris</td>
+          <td>
+            <!-- Image link: jumps to the Eiffel Tower information section -->
+            <a href="#eiffel-tower">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg"
+                alt="Eiffel Tower"
+                class="attraction-image"
+              />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Rome</td>
+          <td>
+            <!-- Image link: jumps to the Colosseum information section -->
+            <a href="#colosseum">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg"
+                alt="Colosseum"
+                class="attraction-image"
+              />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>New York</td>
+          <td>
+            <!-- Image link: jumps to the Statue of Liberty information section -->
+            <a href="#statue-of-liberty">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg"
+                alt="Statue of Liberty"
+                class="attraction-image"
+              />
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Story section: gives travel information about the Eiffel Tower -->
+    <section id="eiffel-tower" class="story-section">
+      <h2>Eiffel Tower - Paris</h2>
+      <p>
+        The Eiffel Tower is one of the most famous landmarks in the world. It is located in Paris,
+        France, and attracts millions of visitors every year. The tower offers stunning views of
+        the city and is a symbol of French culture and architecture.
+      </p>
+      <a href="#top" class="back-top">Back to top</a>
+    </section>
+
+    <!-- Story section: gives travel information about the Colosseum -->
+    <section id="colosseum" class="story-section">
+      <h2>Colosseum - Rome</h2>
+      <p>
+        The Colosseum is a historic amphitheater in Rome, Italy. It was used in ancient times for
+        gladiator contests and public events. Today, it remains one of the most important examples
+        of Roman engineering and attracts visitors from around the globe.
+      </p>
+      <a href="#top" class="back-top">Back to top</a>
+    </section>
+
+    <!-- Story section: gives travel information about the Statue of Liberty -->
+    <section id="statue-of-liberty" class="story-section">
+      <h2>Statue of Liberty - New York</h2>
+      <p>
+        The Statue of Liberty is a major symbol of freedom and democracy in the United States. It
+        stands on Liberty Island in New York Harbor and was a gift from France. It is one of the
+        most recognized monuments in the world.
+      </p>
+      <a href="#top" class="back-top">Back to top</a>
+    </section>
+  </div>
+</body>
+</html>
